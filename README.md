@@ -1,11 +1,10 @@
 # PhotoRoomKit
 
-[![CI Status](https://img.shields.io/circleci/project/github/PhotoRoom/PhotoRoomKit.svg)](https://circleci.com/gh/PhotoRoom/PhotoRoomKit)
 [![Version](https://img.shields.io/cocoapods/v/PhotoRoomKit.svg?style=flat)](http://cocoadocs.org/docsets/PhotoRoomKit)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/PhotoRoomKit.svg?style=flat)](http://cocoadocs.org/docsets/PhotoRoomKit)
 [![Platform](https://img.shields.io/cocoapods/p/PhotoRoomKit.svg?style=flat)](http://cocoadocs.org/docsets/PhotoRoomKit)
-![Swift](https://img.shields.io/badge/%20in-swift%204.0-orange.svg)
+![Swift](https://img.shields.io/badge/%20in-swift%204.2-orange.svg)
 
 ## Description
 
