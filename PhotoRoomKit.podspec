@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PhotoRoomKit"
-  s.summary          = "A short description of PhotoRoomKit."
+  s.summary          = "Fast background removal API."
   s.version          = "0.0.1"
   s.homepage         = "https://github.com/PhotoRoom/PhotoRoomKit"
   s.license          = 'MIT'
