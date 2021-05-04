@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     :git => "https://github.com/PhotoRoom/PhotoRoomKit.git",
     :tag => s.version.to_s
   }
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.social_media_url = 'https://twitter.com/PhotoRoom'
 
   s.ios.deployment_target = '13.0'
@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   # s.ios.frameworks = 'UIKit', 'Foundation'
   # s.osx.frameworks = 'Cocoa', 'Foundation'
   # s.dependency 'Whisper', '~> 1.0'
-  # s.watchos.exclude_files = ["Sources/AnimatedImageView.swift"] 
+  # s.watchos.exclude_files = ["Sources/AnimatedImageView.swift"]
 end

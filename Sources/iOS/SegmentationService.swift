@@ -14,7 +14,7 @@ struct SegmentationService {
     static func segment(image: UIImage,
                         apiKey: String,
                         onCompletion: @escaping SegmentationCallback) {
-        let host = "https://dev-sdk.photoroom.com/v1/segment"
+        let host = "https://sdk.photoroom.com/v1/segment"
         if apiKey == "" {
             onCompletion(nil, SegmentationError.noAPIKey)
             return
