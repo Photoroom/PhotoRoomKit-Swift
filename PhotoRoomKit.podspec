@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = "PhotoRoomKit"
   s.summary          = "A short description of PhotoRoomKit."
-  s.version          = "0.1.0"
+  s.version          = "0.0.1"
   s.homepage         = "https://github.com/PhotoRoom/PhotoRoomKit"
   s.license          = 'MIT'
-  s.author           = { "PhotoRoom" => "franck@photoroom.com" }
+  s.author           = { "PhotoRoom" => "ios@photoroom.com" }
   s.source           = {
     :git => "https://github.com/PhotoRoom/PhotoRoomKit.git",
     :tag => s.version.to_s
