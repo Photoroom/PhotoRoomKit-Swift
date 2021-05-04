@@ -8,13 +8,7 @@
 
 ## Description
 
-**PhotoRoomKit** description.
-
-## Usage
-
-```swift
-<API>
-```
+**PhotoRoomKit** is a fast background removal API. Power your app with the background removal technology used by millions of sellers every month.
 
 ## Installation
 
@@ -36,7 +30,7 @@ github "PhotoRoom/PhotoRoomKit"
 
 ## Author
 
-PhotoRoom, franck@photoroom.com
+PhotoRoom, hello@photoroom.com
 
 ## Contributing
 
@@ -44,4 +38,4 @@ We would love you to contribute to **PhotoRoomKit**, check the [CONTRIBUTING](ht
 
 ## License
 
-**PhotoRoomKit** is available under the MIT license. See the [LICENSE](https://github.com/PhotoRoom/PhotoRoomKit/blob/master/LICENSE.md) file for more info.
+**PhotoRoomKit** is available under the MIT license. See the [LICENSE](https://github.com/PhotoRoom/PhotoRoomKit/blob/master/LICENSE) file for more info.
