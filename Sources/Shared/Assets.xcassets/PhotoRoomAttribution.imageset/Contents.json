@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "PR_API_Attribution_no_margin.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "PR_API_Attribution_Dark_no_margin.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

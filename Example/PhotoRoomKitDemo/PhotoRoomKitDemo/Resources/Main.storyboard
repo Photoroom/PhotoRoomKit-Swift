@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="api_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ufo-T2-VHA">
+                                <rect key="frame" x="188.5" y="745" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scO-tE-RKt">
+                                <rect key="frame" x="148.5" y="790" width="117" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Pick image"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VxY-Qu-96U">
+                                <rect key="frame" x="0.0" y="52" width="414" height="685"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scO-tE-RKt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Yx-6Z-BIC"/>
+                            <constraint firstItem="ufo-T2-VHA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ok-dX-kDF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="scO-tE-RKt" secondAttribute="bottom" constant="32" id="CHP-0z-5cV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VxY-Qu-96U" secondAttribute="trailing" id="Pc6-0F-fRI"/>
+                            <constraint firstItem="VxY-Qu-96U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="8" id="STi-Ks-kMA"/>
+                            <constraint firstItem="ufo-T2-VHA" firstAttribute="top" secondItem="VxY-Qu-96U" secondAttribute="bottom" constant="8" id="fwo-eM-4w5"/>
+                            <constraint firstItem="scO-tE-RKt" firstAttribute="top" secondItem="ufo-T2-VHA" secondAttribute="bottom" constant="8" id="fzC-UK-rfc"/>
+                            <constraint firstItem="VxY-Qu-96U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sEv-6g-42c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainActivitityIndicator" destination="ufo-T2-VHA" id="Hfy-1m-H73"/>
+                        <outlet property="mainButton" destination="scO-tE-RKt" id="ucl-X7-N2n"/>
+                        <outlet property="mainImage" destination="VxY-Qu-96U" id="07w-y5-q0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

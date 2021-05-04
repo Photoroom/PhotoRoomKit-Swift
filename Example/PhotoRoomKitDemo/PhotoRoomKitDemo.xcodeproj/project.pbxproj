@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6E9DC33B058DF6CCE0E4717E /* Pods_PhotoRoomKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B129B86809745EBAE1CA907C /* Pods_PhotoRoomKitDemo.framework */; };
+		95097DE12641479A00854E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95097DE02641479A00854E2B /* Main.storyboard */; };
+		957103172641314900319C32 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957103162641314900319C32 /* Constants.swift */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		46D4334A884135F07DC72A14 /* Pods-PhotoRoomKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRoomKitDemo.release.xcconfig"; path = "Target Support Files/Pods-PhotoRoomKitDemo/Pods-PhotoRoomKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		95097DE02641479A00854E2B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		957103162641314900319C32 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B129B86809745EBAE1CA907C /* Pods_PhotoRoomKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoRoomKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11C2F727048E458A1B4379D /* Pods-PhotoRoomKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoRoomKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-PhotoRoomKitDemo/Pods-PhotoRoomKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C7F7401C3BC9CE008CDDBA /* PhotoRoomKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoRoomKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +48,6 @@
 				C11C2F727048E458A1B4379D /* Pods-PhotoRoomKitDemo.debug.xcconfig */,
 				46D4334A884135F07DC72A14 /* Pods-PhotoRoomKitDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +91,7 @@
 		D5C7F7561C3BCA1E008CDDBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				95097DE02641479A00854E2B /* Main.storyboard */,
 				D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -96,6 +100,7 @@
 		D5C7F7581C3BCA1E008CDDBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				957103162641314900319C32 /* Constants.swift */,
 				D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */,
 				D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */,
 			);
@@ -144,6 +149,7 @@
 				TargetAttributes = {
 					D5C7F73F1C3BC9CE008CDDBA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = FKKWUHNWNH;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -153,6 +159,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -171,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95097DE12641479A00854E2B /* Main.storyboard in Resources */,
 				D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */,
 				D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */,
 			);
@@ -228,6 +236,7 @@
 			files = (
 				D5C7F75D1C3BCA1E008CDDBA /* ViewController.swift in Sources */,
 				D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */,
+				957103172641314900319C32 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -350,10 +359,12 @@
 			baseConfigurationReference = C11C2F727048E458A1B4379D /* Pods-PhotoRoomKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FKKWUHNWNH;
 				INFOPLIST_FILE = PhotoRoomKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photoroom.kit.PhotoRoomKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -362,10 +373,12 @@
 			baseConfigurationReference = 46D4334A884135F07DC72A14 /* Pods-PhotoRoomKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FKKWUHNWNH;
 				INFOPLIST_FILE = PhotoRoomKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photoroom.kit.PhotoRoomKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
