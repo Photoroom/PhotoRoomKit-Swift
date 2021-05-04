@@ -1,5 +1,5 @@
 PODS:
-  - PhotoRoomKit (0.1.0)
+  - PhotoRoomKit (0.0.1)
 
 DEPENDENCIES:
   - PhotoRoomKit (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  PhotoRoomKit: c63d120592fe59dab1f7e183ddd8a65efce12803
+  PhotoRoomKit: fe0eb2b1760e36a57685d8fda81456edb7d83b63
 
 PODFILE CHECKSUM: 75a88f0e658c982c9ca2e49331e2562d62c6ab27
 

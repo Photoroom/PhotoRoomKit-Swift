@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.summary          = "Fast background removal API."
   s.version          = "0.0.1"
   s.homepage         = "https://github.com/PhotoRoom/PhotoRoomKit"
-  s.license          = 'MIT'
+  s.license          = { :type => 'MIT' }
   s.author           = { "PhotoRoom" => "ios@photoroom.com" }
   s.source           = {
     :git => "https://github.com/PhotoRoom/PhotoRoomKit.git",
