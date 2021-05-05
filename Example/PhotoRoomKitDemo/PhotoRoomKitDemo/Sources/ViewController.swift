@@ -32,9 +32,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     func removeBackground(_ originalImage: UIImage) {
-        let resultViewController = EditingViewController(image: originalImage,
-                                                        apiKey: K.photoRoomAPIKey,
-                                                        completionHandler: onImageEdited)
+        let resultViewController = PhotoRoomViewController(image: originalImage,
+                                                           apiKey: K.photoRoomAPIKey) { [weak self] image in
+            self?.onImageEdited(image)
+
+        }
         present(resultViewController, animated: true)
     }
 
