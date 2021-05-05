@@ -28,6 +28,52 @@ github "PhotoRoom/PhotoRoomKit"
 
 **PhotoRoomKit** can also be installed manually. Just download and drop `Sources` folders in your project.
 
+## Usage
+
+First you will need an API Key, go to [our API website](https://photoroom.com/api) to get your own PhotoRoom key.
+
+Then, you can either use the provided `PhotoRoomViewController`, or use the API wrapper
+
+#### PhotoRoomViewController
+
+Just present `PhotoRoomViewController` and handle the callback
+```swift
+func removeBackground(_ originalImage: UIImage) {
+    let controller = PhotoRoomViewController(image: originalImage,
+                                                       apiKey: 'YOUR_API_KEY') { [weak self] image in
+        self?.onImageEdited(image)
+
+    }
+    present(controller, animated: true)
+}
+
+func onImageEdited(_ editedImage: UIImage) {
+    // Handle your segmented image
+}
+```
+When using the built-in view controller, Photoroom attribution is done for you, no need for extra work.
+
+#### API wrapper
+
+You can also use the API wrapper directly.
+```swift
+let segmentationService = SegmentationService(apiKey: apiKey)
+segmentationService.segment(image: originalImage) { (image, error) in
+    DispatchQueue.main.async {
+        if let error = error {
+            // An error occured
+        }
+        guard let image = image else {
+            // No image returned
+            return
+        }
+        // All good
+    }
+}
+```
+
+⚠️ If you use the API wrapper, you'll need to provide correct attribution according to [our API guideline](https://www.notion.so/photoroom/API-Documentation-public-4eb3e45d9c814f92b6392b7fd0f1d51f#7ac1c3bd30fd426ea092e126f4b59c77).
+
 ## Author
 
 PhotoRoom, hello@photoroom.com
