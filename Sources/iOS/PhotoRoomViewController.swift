@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-final public class EditingViewController: UIViewController {
+/// Ready to use ViewController to remove the background
+final public class PhotoRoomViewController: UIViewController {
     enum ViewState {
         case success
         case loading
@@ -113,7 +113,10 @@ final public class EditingViewController: UIViewController {
     }()
 
     // MARK: - Life Cycle
-
+    /// - Parameters:
+    ///     - image: The image you want to remove background
+    ///     - apiKey: PhotoRoom API key
+    ///     - completionHandler: Called once the background removal has been completed. Will not return if errored
     public init(image: UIImage, apiKey: String, completionHandler: ((UIImage) -> Void)? = nil) {
         self.originalImage = image
         self.apiKey = apiKey
@@ -140,7 +143,8 @@ final public class EditingViewController: UIViewController {
         viewState = .loading
 
         //remove background
-        SegmentationService.segment(image: originalImage, apiKey: apiKey, onCompletion: { (image, error) in
+        let segmentationService = SegmentationService(apiKey: apiKey)
+        segmentationService.segment(image: originalImage) { (image, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     self.viewState = .error(error: error)
@@ -154,9 +158,7 @@ final public class EditingViewController: UIViewController {
                     self.viewState = .success
                 })
             }
-        })
-
-        // Do any additional setup after loading the view.
+        }
     }
     
     // MARK: - Constraints

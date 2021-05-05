@@ -8,22 +8,36 @@
 import Foundation
 import UIKit
 
-struct SegmentationService {
-    typealias SegmentationCallback = (UIImage?, Error?) -> Void
+/// Service to remove background from any image
+public final class SegmentationService {
 
-    static func segment(image: UIImage,
-                        apiKey: String,
+    /// Handler containing the possible segmented image
+    public typealias SegmentationCallback = (UIImage?, Error?) -> Void
+
+    private let apiKey: String
+    private enum K {
+        static let hostURL = URL(string: "https://sdk.photoroom.com/v1/segment")!
+    }
+
+    /// - Parameters:
+    ///     - apiKey: PhotoRoom API key
+    public init(apiKey: String) {
+        self.apiKey = apiKey
+    }
+
+    /// Segment the image to a white background
+    /// - Parameters:
+    ///     - image: The image you want to remove background
+    ///     - onCompletion: Called once the segmentation is over. See `SegmentationCallback` for more detail
+    public func segment(image: UIImage,
                         onCompletion: @escaping SegmentationCallback) {
-        let host = "https://sdk.photoroom.com/v1/segment"
-        if apiKey == "" {
+
+        guard apiKey.isEmpty == false else {
             onCompletion(nil, SegmentationError.noAPIKey)
             return
         }
-        guard let url = URL(string: host) else {
-            onCompletion(nil, SegmentationError.invalidData)
-            return
-        }
-        var request = URLRequest(url: url)
+
+        var request = URLRequest(url: K.hostURL)
         request.httpMethod = "POST"
         request.timeoutInterval = 30.0
         
@@ -36,8 +50,8 @@ struct SegmentationService {
             return
         }
 
-        let boundary = generateBoundary()
-        let body = createDataBody(with: media, boundary: boundary)
+        let boundary = Self.generateBoundary()
+        let body = Self.createDataBody(with: media, boundary: boundary)
 
         request.httpBody = body
 
@@ -71,11 +85,11 @@ struct SegmentationService {
         
     }
 
-    static func generateBoundary() -> String {
+    private static func generateBoundary() -> String {
         return "Boundary-\(NSUUID().uuidString)"
     }
 
-    static func createDataBody(with media: Media, boundary: String) -> Data {
+    private static func createDataBody(with media: Media, boundary: String) -> Data {
 
         let lineBreak = "\r\n"
         var body = Data()
