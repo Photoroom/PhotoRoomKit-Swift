@@ -2,15 +2,15 @@ Pod::Spec.new do |s|
   s.name             = "PhotoRoomKit"
   s.summary          = "Fast background removal API."
   s.version          = "0.0.2"
-  s.homepage         = "https://github.com/PhotoRoom/PhotoRoomKit"
+  s.homepage         = "https://github.com/PhotoRoom/PhotoRoomKit-Swift"
   s.license          = { :type => 'MIT' }
   s.author           = { "PhotoRoom" => "ios@photoroom.com" }
   s.source           = {
-    :git => "https://github.com/PhotoRoom/PhotoRoomKit.git",
+    :git => "https://github.com/PhotoRoom/PhotoRoomKit-Swift.git",
     :tag => s.version.to_s
   }
   s.swift_version = '5.0'
-  s.social_media_url = 'https://twitter.com/PhotoRoom'
+  s.social_media_url = 'https://twitter.com/photoroom_app'
 
   s.ios.deployment_target = '13.0'
 
