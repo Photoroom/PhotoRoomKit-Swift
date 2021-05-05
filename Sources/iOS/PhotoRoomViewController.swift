@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/// Ready to use ViewController to remove the background
 final public class PhotoRoomViewController: UIViewController {
     enum ViewState {
         case success
@@ -113,7 +113,10 @@ final public class PhotoRoomViewController: UIViewController {
     }()
 
     // MARK: - Life Cycle
-
+    /// - Parameters:
+    ///     - image: The image you want to remove background
+    ///     - apiKey: PhotoRoom API key
+    ///     - completionHandler: Called once the background removal has been completed. Will not return if errored
     public init(image: UIImage, apiKey: String, completionHandler: ((UIImage) -> Void)? = nil) {
         self.originalImage = image
         self.apiKey = apiKey

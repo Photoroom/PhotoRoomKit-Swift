@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
+/// Service to remove background from any image
 public final class SegmentationService {
+
+    /// Handler containing the possible segmented image
     public typealias SegmentationCallback = (UIImage?, Error?) -> Void
 
     private let apiKey: String
@@ -16,10 +19,16 @@ public final class SegmentationService {
         static let hostURL = URL(string: "https://sdk.photoroom.com/v1/segment")!
     }
 
+    /// - Parameters:
+    ///     - apiKey: PhotoRoom API key
     public init(apiKey: String) {
         self.apiKey = apiKey
     }
 
+    /// Segment the image to a white background
+    /// - Parameters:
+    ///     - image: The image you want to remove background
+    ///     - onCompletion: Called once the segmentation is over. See `SegmentationCallback` for more detail
     public func segment(image: UIImage,
                         onCompletion: @escaping SegmentationCallback) {
 
