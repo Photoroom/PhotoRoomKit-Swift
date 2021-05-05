@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		95097DE52641494A00854E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95097DE42641494A00854E2B /* Assets.xcassets */; };
+		95097E2A2642C83900854E2B /* PhotoRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95097E292642C83900854E2B /* PhotoRoomViewController.swift */; };
 		9571030B26412ACF00319C32 /* SegmentationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571030826412ACF00319C32 /* SegmentationService.swift */; };
 		9571030C26412ACF00319C32 /* ImageHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571030926412ACF00319C32 /* ImageHelpers.swift */; };
-		9571030D26412ACF00319C32 /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571030A26412ACF00319C32 /* EditingViewController.swift */; };
 		D284B1461F7908B300D94AF3 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
 		D284B1471F7908B800D94AF3 /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1361F7906DA00D94AF3 /* iOSTests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* PhotoRoomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* PhotoRoomKit.framework */; };
@@ -28,9 +28,9 @@
 
 /* Begin PBXFileReference section */
 		95097DE42641494A00854E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95097E292642C83900854E2B /* PhotoRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRoomViewController.swift; sourceTree = "<group>"; };
 		9571030826412ACF00319C32 /* SegmentationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentationService.swift; sourceTree = "<group>"; };
 		9571030926412ACF00319C32 /* ImageHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelpers.swift; sourceTree = "<group>"; };
-		9571030A26412ACF00319C32 /* EditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
 		D284B12F1F7906DA00D94AF3 /* Info-iOS-Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS-Tests.plist"; sourceTree = "<group>"; };
 		D284B1321F7906DA00D94AF3 /* SharedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		D284B1361F7906DA00D94AF3 /* iOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9571030A26412ACF00319C32 /* EditingViewController.swift */,
+				95097E292642C83900854E2B /* PhotoRoomViewController.swift */,
 				9571030926412ACF00319C32 /* ImageHelpers.swift */,
 				9571030826412ACF00319C32 /* SegmentationService.swift */,
 			);
@@ -249,8 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95097E2A2642C83900854E2B /* PhotoRoomViewController.swift in Sources */,
 				9571030B26412ACF00319C32 /* SegmentationService.swift in Sources */,
-				9571030D26412ACF00319C32 /* EditingViewController.swift in Sources */,
 				9571030C26412ACF00319C32 /* ImageHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

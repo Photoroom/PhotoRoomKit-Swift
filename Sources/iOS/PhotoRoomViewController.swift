@@ -7,7 +7,7 @@
 
 import UIKit
 
-final public class EditingViewController: UIViewController {
+final public class PhotoRoomViewController: UIViewController {
     enum ViewState {
         case success
         case loading
@@ -140,7 +140,8 @@ final public class EditingViewController: UIViewController {
         viewState = .loading
 
         //remove background
-        SegmentationService.segment(image: originalImage, apiKey: apiKey, onCompletion: { (image, error) in
+        let segmentationService = SegmentationService(apiKey: apiKey)
+        segmentationService.segment(image: originalImage) { (image, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     self.viewState = .error(error: error)
@@ -154,9 +155,7 @@ final public class EditingViewController: UIViewController {
                     self.viewState = .success
                 })
             }
-        })
-
-        // Do any additional setup after loading the view.
+        }
     }
     
     // MARK: - Constraints

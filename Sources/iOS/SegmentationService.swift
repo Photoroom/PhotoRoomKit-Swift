@@ -8,22 +8,27 @@
 import Foundation
 import UIKit
 
-struct SegmentationService {
-    typealias SegmentationCallback = (UIImage?, Error?) -> Void
+public final class SegmentationService {
+    public typealias SegmentationCallback = (UIImage?, Error?) -> Void
 
-    static func segment(image: UIImage,
-                        apiKey: String,
+    private let apiKey: String
+    private enum K {
+        static let hostURL = URL(string: "https://sdk.photoroom.com/v1/segment")!
+    }
+
+    public init(apiKey: String) {
+        self.apiKey = apiKey
+    }
+
+    public func segment(image: UIImage,
                         onCompletion: @escaping SegmentationCallback) {
-        let host = "https://sdk.photoroom.com/v1/segment"
-        if apiKey == "" {
+
+        guard apiKey.isEmpty == false else {
             onCompletion(nil, SegmentationError.noAPIKey)
             return
         }
-        guard let url = URL(string: host) else {
-            onCompletion(nil, SegmentationError.invalidData)
-            return
-        }
-        var request = URLRequest(url: url)
+
+        var request = URLRequest(url: K.hostURL)
         request.httpMethod = "POST"
         request.timeoutInterval = 30.0
         
@@ -36,8 +41,8 @@ struct SegmentationService {
             return
         }
 
-        let boundary = generateBoundary()
-        let body = createDataBody(with: media, boundary: boundary)
+        let boundary = Self.generateBoundary()
+        let body = Self.createDataBody(with: media, boundary: boundary)
 
         request.httpBody = body
 
@@ -71,11 +76,11 @@ struct SegmentationService {
         
     }
 
-    static func generateBoundary() -> String {
+    private static func generateBoundary() -> String {
         return "Boundary-\(NSUUID().uuidString)"
     }
 
-    static func createDataBody(with media: Media, boundary: String) -> Data {
+    private static func createDataBody(with media: Media, boundary: String) -> Data {
 
         let lineBreak = "\r\n"
         var body = Data()
