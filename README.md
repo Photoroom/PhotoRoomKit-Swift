@@ -6,6 +6,12 @@
 [![Platform](https://img.shields.io/cocoapods/p/PhotoRoomKit.svg?style=flat)](http://cocoadocs.org/docsets/PhotoRoomKit)
 ![Swift](https://img.shields.io/badge/%20in-swift%205.0-orange.svg)
 
+## ⚠️ Important – Deprecated ⚠️
+
+Please note that `PhotoRoomKit` has been **deprecated**.
+
+For an up-to-date code sample, please check out: https://github.com/PhotoRoom/api-code-samples/
+
 ## Description
 
 **PhotoRoomKit** is a fast background removal API. Power your app with the background removal technology used by millions of sellers every month.
